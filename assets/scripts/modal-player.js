@@ -87,7 +87,7 @@ class modalPlayer extends HTMLElement {
         this.setIframeAttributes(iFrame, {
             'id': 'player',
             'type': 'text/html',
-            'src': `//www.youtube.com/embed/${id}?enablejsapi=1`,
+            'src': `https://www.youtube.com/embed/${id}?enablejsapi=1`,
             'frameborder': '0'
         });
         this.playerContainer.appendChild(iFrame);
