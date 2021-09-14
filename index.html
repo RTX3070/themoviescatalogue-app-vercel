@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>The Movies Catalogue</title>
+</head>
+
+<body>
+    <div class="preloader-container">
+        <img src="./assets/img/preloader-64x64.gif" alt="Preloader Icon" class="preloader">
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="./assets/img/logo.svg" alt="Logo" class="logo"></a>
+            </div>
+
+            <div class="search-box">
+                <label for="search"></label>
+                <input type="text" class="search" id="search" placeholder="Search...">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="filters-bar">
+            <div class="sort">
+                <label for="sort">Sort by</label>
+                <select name="sorting" id="sort">
+                    <option value="popularity.desc" selected>Popularity</option>
+                    <option value="release_date.desc">Newest</option>
+                    <option value="release_date.asc">Oldest</option>
+                    <option value="vote_average.desc">Rating</option>
+                </select>
+            </div>
+
+            <div class="nationality">
+                <label for="nation">Change Nation</label>
+                <select name="nationality" id="nation">
+                    <option value="de-DE">🇩🇪 DE</option>
+                    <option value="es-ES">🇪🇸 ES</option>
+                    <option value="fr-FR">🇫🇷 FR</option>
+                    <!-- <option value="en-GB">🇬🇧 GB</option> -->
+                    <option value="it-IT">🇮🇹 IT</option>
+                    <option value="ru-RU">🇷🇺 RU</option>
+                    <option value="en-US" selected>🇺🇸 US</option>
+                </select>
+            </div>
+
+            <span class="filter-icon"><i class="fas fa-th fa-lg"></i></span>
+        </div>
+
+        <div class="cards-container"></div>
+
+        <div class="pagination">
+            <span class="left-arrow"><i class="fas fa-angle-left"></i></span>
+            <div class="page">
+                <label id="pages-label" for="pageNumber"></label>
+                <input type="text" name="pageNumber" id="pageNumber" maxlength="3" placeholder="0" value="1">
+            </div>
+            <span class="right-arrow"><i class="fas fa-angle-right"></i></span>
+        </div>
+
+        <div class="push"></div>
+    </main>
+    
+    <footer>
+        <div class="footer-logo">
+            <img src="./assets/img/logo.svg" alt="Logo">
+        </div>
+
+        <div class="footer-credits">
+            <p>Credits:</p>
+
+            <p class="link">
+                <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=156745"  target="_blank">OpenClipart-Vectors</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=156745 " target="_blank">Pixabay</a>
+            </p>
+
+            <p class="link">
+                <a href="https://pixabay.com/users/darksouls1-2189876/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4032943" target="_blank">Enrique Meseguer</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4032943" target="_blank">Pixabay</a>
+            </p>
+
+            <p class="link">
+                <a href="https://www.themoviedb.org " target="_blank">The Movie Database (TMDb)</a>
+            </p>
+
+            <p>Made with ❤️ by RTX3070:</p>
+
+            <p class="link">
+                My <a href="https://github.com/RTX3070" target="_blank">GitHub</a>
+            </p>
+
+            <p class="link">
+                My <a href="https://codepen.io/rtx3070" target="_blank">Codepen</a>
+            </p>
+        </div>
+
+        <i class="fas fa-chevron-up up-arrow"></i>
+
+        <span class="author"></span>
+    </footer>
+    
+    <script src="./assets/scripts/modal-player.js"></script>
+    <script src="./assets/scripts/script.js" type="module"></script>
+</body>
+</html>
